@@ -1,0 +1,32 @@
+<h2><i class="fas fa-cogs"></i> Panneau d'administration</h2>
+
+<fieldset>
+<legend><i class="fas fa-lock"></i> Historique des commandes</legend>
+<table class="generic-table meal-list tableBorders">
+    <tbody>
+        <tr id="firstRow">
+            <td>Num Com</td>
+            <td>Num User</td>
+            <td>Dates Créa</td>
+            <td>Dates Succ</td>
+            <td>TVA</td>
+            <td>Prix TVA</td>
+            <td>Total</td>
+        </tr>
+        <?php foreach($ordersList as $o):?>
+        <tr>
+            <td class="coloredNumbers"><?=$o['Id']?></td>
+            <td class="coloredNumbers"><?=$o['User_Id']?></td>
+            <td><?=$o['CreationTimestamp']?></td>
+            <td><?=$o['CompleteTimestamp']?></td>
+            <td><?=$o['TaxRate']?> %</td>
+            <td><?=$o['TaxAmount']?> &euro;</td>
+            <td><?=$o['TotalAmount']?> &euro;</td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
+</fieldset>
+<fieldset>
+<legend>Detail</legend>
+</fieldset>

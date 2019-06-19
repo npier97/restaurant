@@ -1,0 +1,13 @@
+<form method="post" action="<?=$requestUrl?>/user/users">
+    <fieldset>
+        <legend>Compte utilisateur</legend>
+            <?=$userInfo['LastName']?> <?=$userInfo['FirstName']?><br>
+            <label for="role">Rôle :</label>
+            <select name="role" id="role">
+                <option value="1">Administrateur</option>
+                <option value="0">Utilisateur</option>
+            </select><br>
+    </fieldset>
+    <input type="submit" class="button" value="Mettre à jour" name="submitUpdatedRole" id="submitUpdatedRole">
+    <a href="<?=$requestUrl?>/user/users" class="button button-cancel">Annuler</a>
+</form>

@@ -1,0 +1,14 @@
+<h2><i class="fas fa-utensils"></i> Réservation d'une table</h2>
+
+<form method="post" action="<?=$requestUrl?>/user/book/">
+    <fieldset>
+        <legend>Informations</legend>
+        <label for="date">Date de réservation :</label>
+        <input type="date" name="date" id="date" required> à <input type="time" name="time" id="time" required><br>
+
+        <label for="dish">Nombre de couverts :</label>
+        <input type="number" min="0" max="80" name="dish" id="dish" required>
+    </fieldset>
+    <input type="submit" class="button" value="Réserver" name="submit" id="submit">
+    <a href="<?=$requestUrl?>/user/register" class="button button-cancel">Annuler</a>
+</form>

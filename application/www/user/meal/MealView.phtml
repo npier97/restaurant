@@ -1,0 +1,46 @@
+<h2><i class="fas fa-fire"></i> Ajout d'un produit alimentaire au catalogue</h2>
+
+<form method="post" action="<?=$requestUrl?>/user/meal">
+    <fieldset>
+        <legend><i class="fas fa-check"></i> Caractéristiques</legend>
+            <form method="post" action="">
+                <label for="name">Nom :</label>
+                <input type="text" name="name" id="name" required><br>
+
+                <label for="description">Description :</label>
+                <input type="textarea" name="description" id="description" rows="5" cols="33" required><br>
+
+                <label for="file">Photo :</label>
+                <input type="file" name="file" id="file" value="Choisir un fichier"><br>
+                <p><i class="fas fa-exclamation-triangle"></i> Merci de renommer le fichier de la photo avec le nom de l'aliment avant de l'envoyer</p>
+    </fieldset>
+    <fieldset>
+        <legend><i class="fas fa-retweet"></i> Approvisionnement</legend>
+            <label for="stock">Stock initial:</label>
+            <input type="text" name="stock" id="stock" required><br>
+            <label for="buyPrice">Prix d'achat :</label>
+            <input type="number" name="buyPrice" id="buyPrice" required> €<br>
+            <label for="salePrice">Prix de vente :</label>
+            <input type="number" name="salePrice" id="salePrice" required> €<br>
+    </fieldset>
+    <input type="submit" name="submitNewMeal" id="submitNewMeal" value="Ajouter" class="button">
+</form>
+<form method="post" action="<?=$requestUrl?>/user/meal">
+    <fieldset>
+        <legend><i class="fas fa-check"></i> Caractéristiques</legend>
+            <table class="generic-table meal-list">
+                <tbody>
+                    <!-- Code HTML Ã  Ã©crire -->
+                    <?php foreach($meals as $m):?>
+                    <tr>
+                        <td colspan="2"><p><?=$m['Name']?></p></td>
+                        <td><?=$m['SalePrice']?> &euro;</td>
+                        <td><input type="checkbox" name="selected[]" value="<?=$m['Id']?>"></td>
+                    </tr>
+                    <?php endforeach;?>
+                </tbody>
+            </table>
+            <input type="submit" name="submitDeletion" value="Supprimer" class="button">
+            <a href="<?=$requestUrl?>/user/meal" class="button button-cancel">Annuler</a>
+    </fieldset>
+</form>

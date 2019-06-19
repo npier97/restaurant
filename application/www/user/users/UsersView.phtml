@@ -1,0 +1,16 @@
+<h2>Liste des utilisateurs</h2>
+
+<table class="generic-table tableBorders">
+    <thead>
+        <th id="firstRow" colspan="2" style="text-align:center;">Comptes et dates de crÃ©ation</th>
+    </thead>
+    <?php foreach($usersList as $u):?>
+        <tr>
+            <td>
+                <a href="<?=$requestUrl?>/user/detail?Id=<?= $u['Id'];?>"><?=$u['LastName']?> <?=$u['FirstName']?></a><br>
+                <!-- Récupérer Id de l'utilisateur avec ?Id=... -->
+                <td><?=$u['CreationTimestamp']?></td>
+            </td>
+        </tr>
+    <?php endforeach;?>
+</table>

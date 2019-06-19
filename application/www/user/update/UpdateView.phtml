@@ -1,0 +1,43 @@
+<h2>Modifications de compte</h2>
+
+<form method="post" action="<?=$requestUrl?>/user/update/">
+    <fieldset>
+        <legend>Identité et coordonnées</legend>
+        <label for="name">Nom :</label>
+        <input type="text" name="name" id="name" value="<?=$_SESSION['user']['LastName']?>" required><br>
+
+        <label for="firstname">Prénom :</label>
+        <input type="text" name="firstname" id="firstname" value="<?=$_SESSION['user']['FirstName']?>" required><br>
+
+        <label for="date">Date de naissance :</label>
+        <input type="date" name="date" id="date" value="<?=$_SESSION['user']['BirthDate']?>" required><br>
+
+        <label for="address">Adresse :</label>
+        <input type="textarea" name="address" id="address" value="<?=$_SESSION['user']['Address']?>" required><br>
+
+        <label for="city">Ville :</label>
+        <input type="text" name="city" id="city" value="<?=$_SESSION['user']['City']?>" required><br>
+
+        <label for="zipcode">Code Postal :</label>
+        <input type="text" name="zipcode" id="zipcode" value="<?=$_SESSION['user']['ZipCode']?>" required><br>
+
+        <label for="country">Pays :</label>
+        <input type="text" name="country" id="country" value="<?=$_SESSION['user']['Country']?>" required><br>
+
+        <label for="phone">Telephone :</label>
+        <input type="tel" name="phone" id="phone" value="<?=$_SESSION['user']['Phone']?>" pattern="[0-9]{10}" required><br>
+    </fieldset>
+    <fieldset>
+        <legend>Informations d'authentification</legend>
+        <label for="email">E-mail :</label>
+        <input type="email" name="email" id="email" value="<?=$_SESSION['user']['Email']?>" required><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" required><br>
+
+        <label for="confirmPassword">Confirmer le mot de passe :</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" required>
+    </fieldset>
+    <input type="submit" class="button" value="Mettre à jour" name="submitUpdates" id="submitUpdates">
+    <a href="<?=$requestUrl?>/" class="button button-cancel">Annuler</a>
+</form>
