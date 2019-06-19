@@ -10,7 +10,7 @@ Le site sert autant aux clients qu'aux salariés du restaurant qui, quand ils se
 
 Framework imposé pour ce projet.
 
-Suivre l'architecture proposé par le framework et organier le code autour de celui-ci permet d'augmenter la productivité et donc d'accélérer le développement.
+Suivi de l'architecture proposé par le framework et organisation du code autour de celui-ci.
 
 ## Organisation des dossiers et fichiers
 
