@@ -12,8 +12,10 @@ Framework imposé pour ce projet.
 
 Suivi de l'architecture proposé par le framework et organisation du code autour de celui-ci.
 
-## Organisation des dossiers et fichiers
+## Organisation
 
+- Conception et développement avec HTML, CSS, PHP, JS(JQuery) et MySQL.
+- Utilisation de l'AJAX pour chargement d'images au clic.
 - Centralisation des requêtes vers `index.php` (*entry point*).
 
 L'application est basée autour d'un mini-framework développé par la 3WA. Les fichiers fournis sont organisés de la manière suivante :
