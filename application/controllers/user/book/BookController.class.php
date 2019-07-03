@@ -23,6 +23,10 @@ class BookController
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $formFields contient l'équivalent de $_POST en PHP natif.
     	 */
-        
+		if(isset($_SESSION['user'])){
+			$b = new BookModel();
+			$newBooking = $b->addBooking($formFields);   
+			$http->redirectTo('/');
+		}     
     }
 }
